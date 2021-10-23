@@ -100,11 +100,11 @@
   cursor: pointer;
 
   &.green {
-    background-color: $color-secundary;
+    background-color: $color-secondary;
     color: $color-button-text;
     transition: background-color .2s;
     &:hover {
-      background-color: $color-secundary-dark;
+      background-color: $color-secondary-dark;
     }
   }
   

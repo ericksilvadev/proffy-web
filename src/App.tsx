@@ -1,5 +1,5 @@
 import { Switch, Route } from 'react-router';
-import { Splash, OnboardingOne, OnboardingTwo, Login } from './pages';
+import { Splash, OnboardingOne, OnboardingTwo, Login, Landing } from './pages';
 
 import './assets/style/main.scss'
 
@@ -10,6 +10,7 @@ function App() {
       <Route path="/onboarding-1" component={ OnboardingOne } />
       <Route path="/onboarding-2" component={ OnboardingTwo } />
       <Route path="/login" component={ Login } />
+      <Route path="/landing" component={ Landing } />
     </Switch>
   )
 }

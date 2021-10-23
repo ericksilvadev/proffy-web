@@ -4,8 +4,8 @@ $color-primary-light: #916BEA;
 $color-primary: #8257E5;
 $color-primary-dark: #774DD6;
 $color-primary-darker: #6842C2;
-$color-secundary: #04D361;
-$color-secundary-dark: #04BF58;
+$color-secondary: #04D361;
+$color-secondary-dark: #04BF58;
 $color-title-in-primary: #FFFFFF;
 $color-text-in-primary: #D4C2FF;
 $color-text-title: #32264D;
@@ -39,4 +39,28 @@ input,
 button,
 textarea {
   font: 500 1em Poppins;
+}
+
+@media (min-height: 740px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-height: 800px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-height: 930px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 }

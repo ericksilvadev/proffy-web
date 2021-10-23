@@ -69,7 +69,7 @@ export default function Login() {
           <Button
             disabled={ false }
             name="Entrar"
-            link="/main"
+            link="/landing"
             color="green"
             onClick={() => {}}
           />
