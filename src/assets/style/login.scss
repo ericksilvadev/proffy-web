@@ -1,0 +1,153 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+
+  .upper-login {
+    background-image: url('../images/purple-background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45%;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: 50%;
+
+      .login-logo {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: .8em;
+        color: rgb(223, 223, 223);
+        font-weight: 200;
+        width: 70%;
+      }
+    }
+  }
+
+  .login-form {
+    padding: 2.4em 1.9em;
+    
+    .heading {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2em;
+
+      h3 {
+        color: $color-text-title;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+
+      a {
+        font-size: .7em;
+        color: $color-primary-dark;
+      }
+    }
+
+    .complement {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: .8em;
+      color: $color-text-complement;
+      padding: 3em 0;
+      a {
+        color: $color-text-complement;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        
+        &::selection {
+          background-color: none;
+          color: $color-text-complement;
+        }
+        input {
+          margin-right: 1em;
+        }
+        input::before {
+          transform: translate(-0.1em, -0.23em);
+          content: '';
+          height: 1.4em;
+          width: 1.4em;
+          position: absolute;
+          background-color: none;
+          background-image: url('../images/not-checked.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        input:checked::before {
+          transform: translate(-0.1em, -0.23em);
+          content: '';
+          height: 1.4em;
+          width: 1.4em;
+          position: absolute;
+          background-color: none;
+          background-image: url('../images/checked.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 20px;
+  }
+  .login-page {
+    flex-direction: row;
+
+    .upper-login {
+      height: 100%;
+      width: 50%;
+
+      .title h2 {
+        font-size: 1.4em;
+        width: 55%;
+        min-width: 10em
+      }
+    }
+
+    .form-container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+      .login-form {
+        padding: 0%;
+        width: 55%;
+        max-width: 550px;
+        height: 100%;
+  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          width: 27.7vw;
+          margin: 0;
+          max-width: 550px;
+        }
+      }
+    }
+  }
+}

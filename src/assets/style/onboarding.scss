@@ -1,0 +1,112 @@
+.onboarding {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .onboarding-upper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    height: 45%;
+
+    .bg {
+      position: absolute;
+      min-width: 100vw;
+      z-index: -1;
+    }
+
+    .icon {
+      width: 35%;
+    }
+  }
+
+  .onboarding-infos {
+    padding: 6em 2em 4em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 62%;
+
+    h1 {
+      font-family: Archivo, sans-serif;
+      font-weight: 400;
+      font-size: 2.3em;
+      color: rgb(211, 211, 211);
+    }
+
+    h2 {
+      width: 60%;
+      color: $color-text-base;
+      font-size: 1.3em;
+      font-weight: 500;
+      margin-top: 1.7em;
+    }
+
+    button {
+      background: none;
+      border: none;
+      animation: next-btn 1s linear infinite;
+    }
+
+    .paging {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .page-one {
+        width: 1.5em;
+        height: 1em;
+        display: flex;
+        justify-content: space-between;
+  
+        div {
+          width: .5em;
+          height: .5em;
+          border-radius: .15em;
+  
+          &.first {
+            background-color: $color-primary;
+          }
+          &.second {
+            background-color: rgb(211, 211, 211);
+          }
+        }
+      }
+      .page-two {
+        width: 1.5em;
+        height: 1em;
+        display: flex;
+        justify-content: space-between;
+  
+        div {
+          width: .5em;
+          height: .5em;
+          border-radius: .15em;
+  
+          &.first {
+            background-color: rgb(211, 211, 211);
+          }
+          &.second {
+            background-color: $color-primary;
+          }
+        }
+      }
+
+      .next {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@keyframes next-btn {
+  50% {
+    transform: translateX(.2em);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,27 @@
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:  column;
+
+  height: 100vh;
+  width: 100vw;
+
+  .bg-img {
+    height: 70%;
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: -1;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  h2 {
+    color: $color-title-in-primary;
+    font-size: 0.8em;
+    font-weight: 200;
+    width: 50%;
+  }
+}
