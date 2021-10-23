@@ -11,7 +11,7 @@
       display: flex;
       align-items: flex-end;
       padding: 0 1.3em;
-      height: 4.8em;
+      height: 4.2em;
       width: 100%;
       border: 1px solid $color-line-in-white;
       background-color: $color-input-background;
@@ -51,7 +51,7 @@
       z-index: 1;
       color: $color-text-complement;
       transition: .2s;
-      font-size: .9em;
+      font-size: .8em;
     }
 
     &.not-empty::after {
@@ -75,12 +75,19 @@
 
     .show-password {
       background: none;
+      cursor: pointer;
       border: none;
       position: absolute;
-      right: 0;
-      top: -0.35em;
-      width: 4.3em;
+      right: 1em;
+      top: 1em;
+      width: 1.7em !important;
+      height: 1.7em;
       z-index: 2;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
