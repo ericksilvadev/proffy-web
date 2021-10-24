@@ -31,12 +31,12 @@ const Landing = () => {
             <strong>O que deseja fazer?</strong>
           </h2>
           <div className="buttons-wrapper">
-            <Link to="" className="study">
+            <Link to="/study">
               <img src={ studyIcon } alt="Estudar" />
               Estudar
             </Link>
 
-            <Link to="" className="study">
+            <Link to="/give-classes">
               <img src={ giveClassesIcon } alt="Dar aulas" />
               Dar aulas
             </Link>

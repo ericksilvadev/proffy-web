@@ -20,14 +20,14 @@ const Onboarding: React.FC<OnboardingProps> = ({ title, icon, bg, id, link }) =>
   //   )
   // }, [])
 
-  const handleClick = () => {
+  // const handleClick = () => {
     // gsap.fromTo('.onboarding',
     //   { x: 0 },
     //   { x: -window.innerWidth, duration: .4, ease: 'none' }
     // )
 
-    setTimeout(() => history.push(link), 400)
-  }
+  //   setTimeout(() => history.push(link), 400)
+  // }
 
   return (
     <div className="onboarding">
@@ -45,7 +45,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ title, icon, bg, id, link }) =>
             <div className="first" />
             <div className="second" />
           </div>
-          <button onClick={ handleClick }>
+          <button onClick={ () => history.push(link) }>
             <img src={arrowIcon} alt="next" className="next" />
           </button>
         </div>
