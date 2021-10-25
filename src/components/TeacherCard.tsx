@@ -33,9 +33,9 @@ const TeacherCard = () => (
       { weekDay.map((day, i) => {
         return (
           <div className="day">
-            <span>{ day }</span>
+            <span className="week-day">{ day }</span>
             <img src={ arrowIcon } alt="Seta para a direita" />
-            <span>00h - 23h</span>
+            <span className="hour">00h - 23h</span>
           </div>
         )
       }) }
