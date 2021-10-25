@@ -22,7 +22,7 @@ const TeacherCard = () => (
         </div>
       </div>
       <p className="description">
-        BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA 
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit excepturi quos accusamus enim. Eligendi suscipit mollitia repudiandae quasi! Eum, atque fuga molestiae excepturi commodi in libero numquam inventore accusantium debitis unde repudiandae beatae temporibus consequatur mollitia similique qui eaque dolores dolor tempora nihil deleniti assumenda. Sed architecto aut veniam.
       </p>
     </div>
     <div className="teacher-schedule">

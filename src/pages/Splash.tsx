@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Redirect } from 'react-router';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Redirect, useHistory } from 'react-router-dom';
+
 import logo from '../assets/images/logo.svg';
 import background from '../assets/images/purple-background.svg';
 
 export default function Splash() {
-  const [redirect, setRedirect] = useState(false);
-  const [exit, setExit] = useState(false);
+  if (window.matchMedia('(min-width: 1100px)').matches) return <Redirect to="/login" />
+
+  const history = useHistory();
   useEffect(() => {
-    setTimeout(() => setExit(true), 2500);
-    setTimeout(() => setRedirect(true), 3500);
+    setTimeout(() => history.push('/onboarding-1'), 3500);
   }, [])
 
   const bgVariants = {
@@ -25,7 +26,8 @@ export default function Splash() {
     },
     exit: {
       opacity: 0,
-      transition: { delay: 0.8, duration: 0.2}
+      scale: 2,
+      transition: { delay: 0.6, duration: 0.4}
     }
   }
 
@@ -63,28 +65,25 @@ export default function Splash() {
     }
   }
 
-  // const exitVariants = {
-  //   initial: {
-  //     opacity: 1
-  //   },
-  //   animate: {
-  //     opacity: 0,
-  //     transition: { duration: 0.3, type:"spring" }
-  //   }
-  // }
+  const exitVariants = {
+    initial: {
+      opacity: 1
+    },
+    animate: {
+      opacity: 0,
+      transition: { duration: 0.3 }
+    },
+  }
 
-  if (window.matchMedia('(min-width: 900px)').matches) return <Redirect to="/login" />
-  if (redirect) return <Redirect to="/onboarding-1" />
+
   return (
-    <AnimatePresence>
-      { !exit &&
-        <motion.div
-        // variants={ exitVariants }
+    <>
+      <motion.div
         className="splash"
         style={{ overflow: "hidden" }}
-        // initial="initial"
-        // animate="initial"
-        // exit="animate"
+        variants={ exitVariants }
+        initial="initial"
+        animate="initial"
       >
         <motion.img
           className="bg-img"
@@ -112,7 +111,7 @@ export default function Splash() {
         >
           Sua plataforma de <br /> estudos online
         </motion.h2>
-      </motion.div>}
-    </AnimatePresence>
+      </motion.div>
+    </>
   )
 }

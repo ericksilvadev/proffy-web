@@ -30,48 +30,50 @@ const FilterTeacherForm: React.FC<FilterTeacherFormProps>= ({ showForm }) => {
   };
 
   return (
-      <div className="form-filter-wrapper">
-        <AnimatePresence>
-         {  showForm &&
-          <motion.form
-            variants={ variants }
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <div className="select-wrapper">
-              <label htmlFor="subject" />
-                Matéria:
-              <select name="subject" id="subject">
-                <option value="" selected hidden disabled>Selecione</option>
-                { subject.map(subItem => (
-                  <option value={ subItem }>{ subItem }</option>
-                )) }
-              </select>
-            </div>
-            <div className="select-wrapper">
-              <label htmlFor="week-day" />
-                Dia da semana
-                <select name="week-day" id="week-day">
-                <option value="" selected hidden disabled>Selecione</option>
-                { weekDay.map((day, i) => (
-                  <option value={ i }>{ day }</option>
-                )) }
-              </select>
-            </div>
-            <div className="select-wrapper">
-              <label htmlFor="time" />
-                Horário
-              <select name="time" id="time">
-                <option value="" selected hidden disabled>Selecione</option>
-                { time.map(hour => (
-                  <option value={ hour }>{ hour }</option>
-                )) }
-              </select>
-            </div>
-          </motion.form>}
-        </AnimatePresence>
-      </div>
+    <AnimatePresence>
+    '{ showForm &&
+      <motion.div
+        className="form-filter-wrapper"
+        key="animated-form"
+        variants={ variants }
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <form>
+          <div className="select-wrapper">
+            <label htmlFor="subject" />
+              Matéria:
+            <select name="subject" id="subject">
+              <option value="" selected hidden disabled>Selecione</option>
+              { subject.map(subItem => (
+                <option value={ subItem }>{ subItem }</option>
+              )) }
+            </select>
+          </div>
+          <div className="select-wrapper">
+            <label htmlFor="week-day" />
+              Dia da semana
+              <select name="week-day" id="week-day">
+              <option value="" selected hidden disabled>Selecione</option>
+              { weekDay.map((day, i) => (
+                <option value={ i }>{ day }</option>
+              )) }
+            </select>
+          </div>
+          <div className="select-wrapper">
+            <label htmlFor="time" />
+              Horário
+            <select name="time" id="time">
+              <option value="" selected hidden disabled>Selecione</option>
+              { time.map(hour => (
+                <option value={ hour }>{ hour }</option>
+              )) }
+            </select>
+          </div>
+        </form>
+      </motion.div>}
+    </AnimatePresence>
   );
 }
 

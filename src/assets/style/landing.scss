@@ -129,7 +129,7 @@
             color: $color-title-in-primary;
             font-size: 1.5em;
             font-weight: 300;
-            width: 70%;
+            width: 10em;
             max-width: 500px;
           }
         }
@@ -157,17 +157,20 @@
       h2 {
         color: $color-text-title;
         width: 25%;
+        min-width: 10em;
       }
 
       .buttons-wrapper {
         order: 3;
         height: 5em;
-        width: 60%;
+        width: 70%;
+        max-width: 30em;
 
         a {
           flex-direction: row;
           align-items: center;
           justify-content: center;
+          width: 48.5%;
 
           img {
             margin-right: 1.5em;

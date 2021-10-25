@@ -1,3 +1,4 @@
+import { animate, motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 // import { gsap } from 'gsap';
@@ -13,34 +14,122 @@ interface OnboardingProps {
 
 const Onboarding: React.FC<OnboardingProps> = ({ title, icon, bg, id, link }) => {
   const history = useHistory();
-  // useEffect(() => {
-  //   gsap.fromTo('.onboarding',
-  //     { autoAlpha: 0, scale: 0.8 },
-  //     { autoAlpha: 1, scale: 1, duration: .3, ease: 'none' }
-  //   )
-  // }, [])
 
-  // const handleClick = () => {
-    // gsap.fromTo('.onboarding',
-    //   { x: 0 },
-    //   { x: -window.innerWidth, duration: .4, ease: 'none' }
-    // )
+  const bgVariants = {
+    start: {
+      opacity: 0,
+      transition: { duration: 0.1 }
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 0.1 }
+    }
+  };
 
-  //   setTimeout(() => history.push(link), 400)
-  // }
+  const iconVariants = {
+    start: {
+      opacity: 0,
+      y: 25,
+    },
+    animate: {
+      opacity: 1,
+      y: 0
+    }
+  }
+
+  const titleVariants = {
+    start: {
+      opacity: 0,
+      y: 35,
+    },
+    animate: {
+      opacity: 1,
+      y: 0
+    },
+    exit: {
+      opacity: 0,
+      y: -35,
+    }
+  }
+
+  const pagingVariants = {
+    start: {
+      opacity: 0,
+      y: 80,
+    },
+    animate: {
+      opacity: 1,
+      y: 0
+    },
+    exit: {
+      opacity: 0,
+      y: -8,
+    }
+  }
+
+  const headingTransition = {
+    duration: 0.7,
+    delay: 0.2
+  }
 
   return (
-    <div className="onboarding">
+    <motion.div
+      className="onboarding"
+      // variants={variants}
+      // initial="start"
+      // animate="animate"
+      // exit="exit"
+      // transition={ transition }
+    >
       <section className="onboarding-upper">
-        <img className="bg" src={bg} alt="background" />
-        <img className="icon" src={icon} alt="icon" />
+        <motion.img
+          className="bg"
+          src={bg}
+          alt="background"
+          variants={ bgVariants }
+          initial="start"
+          animate="animate"
+          exit="start"
+        />
+        <motion.img
+          className="icon"
+          src={icon}
+          alt="icon" 
+          variants={ iconVariants }
+          initial="start"
+          animate="animate"
+          exit="start"
+        />
       </section>
       <section className="onboarding-infos">
         <div className="heading">
-          <h1>{id}</h1>
-          <h2>{title}</h2>
+          <motion.h1
+            variants={ titleVariants }
+            initial="start"
+            animate="animate"
+            exit="start"
+            transition={{ delay: 0.1 }}
+          >
+            {id}
+          </motion.h1>
+          <motion.h2
+            variants={ titleVariants }
+            initial="start"
+            animate="animate"
+            exit="start"
+            transition={{ delay: 0.2 }}
+          >
+            {title}
+          </motion.h2>
         </div>
-        <div className="paging">
+        <motion.div
+          className="paging"
+          variants={ pagingVariants }
+          initial="start"
+          animate="animate"
+          exit="start"
+          transition={{ delay: 0.3 }}
+        >
           <div className={ id === '01.' ? 'page-one' : 'page-two' }>
             <div className="first" />
             <div className="second" />
@@ -48,9 +137,9 @@ const Onboarding: React.FC<OnboardingProps> = ({ title, icon, bg, id, link }) =>
           <button onClick={ () => history.push(link) }>
             <img src={arrowIcon} alt="next" className="next" />
           </button>
-        </div>
+        </motion.div>
       </section>
-    </div>
+    </motion.div>
   )
 }
 

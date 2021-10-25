@@ -1,5 +1,6 @@
 import { useState, ChangeEventHandler } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import { Button } from '../components';
 import logo from '../assets/images/logo.svg';
@@ -19,15 +20,33 @@ export default function Login() {
     setForm({...form, [name]: value})
   }
 
+  const variants = {
+    start: {
+      opacity: 0,
+      transition: { duration: 0.2 }
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 0.2 }
+    }
+    
+  }
+
   return (
-    <div className="login-page">
-      <div className="upper-login">
+    <motion.div
+      className="login-page"
+      initial="start"
+      animate="animate"
+      exit="start"
+      variants={ variants }
+    >
+      <header className="upper-login">
         <div className="title">
-          <img className="login-logo" src={logo} alt="login-logo" />
+          <img className="login-logo" src={logo} alt="Proffy" />
           <h2>Sua plataforma de estudos online.</h2>
         </div>
-      </div>
-      <div className="form-container">
+      </header>
+      <main className="form-container">
         <form className="login-form">
           <div className="heading">
             <h3>Fazer login</h3>
@@ -40,18 +59,22 @@ export default function Login() {
                 name="email"
                 className="first"
                 // value={ form.email }
-                // onChange={ handleChange }
+                onChange={ handleChange }
               />
             </div>
             <div className={`${isPassEmpty} input-block`} data-placeholder="Senha">
               <input
-                type="password"
+                type={ passwordVisibility ? 'text' : 'password' }
                 name="password"
                 className="second"
                 // value={ form.password }
-                // onChange={ handleChange }
+                onChange={ handleChange }
               />
-              <button className="show-password">
+              <button
+                type="button"
+                className="show-password"
+                onClick={ () => setVisibility(!passwordVisibility) }
+              >
                 <img
                   src={ eyeIcon }
                   alt="mostrar/esconder senha"
@@ -74,7 +97,7 @@ export default function Login() {
             onClick={() => {}}
           />
         </form>
-      </div>
-    </div>
+      </main>
+    </motion.div>
   )
 }

@@ -10,9 +10,9 @@ const TeacherList = () => {
         teacher={ false }
       />
 
-      <div className="teacher-list">
+      <main className="teacher-list">
         <TeacherCard />
-      </div>
+      </main>
     </div>
   );
 }
