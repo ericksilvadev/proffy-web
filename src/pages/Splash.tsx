@@ -81,6 +81,7 @@ export default function Splash() {
         <motion.div
         // variants={ exitVariants }
         className="splash"
+        style={{ overflow: "hidden" }}
         // initial="initial"
         // animate="initial"
         // exit="animate"

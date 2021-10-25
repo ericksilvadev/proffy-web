@@ -1,4 +1,5 @@
 import { Header } from "../components";
+import { TeacherCard } from "../components";
 
 const TeacherList = () => {
   return (
@@ -8,6 +9,10 @@ const TeacherList = () => {
         subtitle="Estes são os proffys disponíveis."
         teacher={ false }
       />
+
+      <div className="teacher-list">
+        <TeacherCard />
+      </div>
     </div>
   );
 }

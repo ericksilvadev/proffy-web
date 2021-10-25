@@ -1,0 +1,150 @@
+.teacher-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -2.6em;
+  
+  .teacher-card {
+    background-color: $color-box-base;
+    width: 90%;
+    border: 1px solid $color-line-in-white;
+    border-radius: 0.7em;
+    
+    .teacher-info {
+      color: $color-text-base;
+      border-bottom: 1px solid $color-line-in-white;
+      padding: 1.6em;
+
+      .heading {
+        display: flex;
+        align-items: center;
+        
+        img {
+          width: 4.3em;
+          border-radius: 50%;
+          margin-right: 1em;;
+        }
+        
+        .title-wrapper {
+          h1 {
+            color: $color-text-title;
+            font-size: 1.3em;
+            font-weight: 600;
+          }
+
+          h2 {
+            font-size: 0.85em;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .description {
+        font-size: 0.9em;
+        padding-top: 2em;
+      }
+    }
+
+    .teacher-schedule {
+      border-bottom: 1px solid $color-line-in-white;
+      padding: 1.6em;
+
+      .schedule-heading {
+        font-size: 0.8em;
+        color: $color-text-complement;
+        padding: 0 2em 0 1em;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .day {
+        font-family: Archivo, sans-serif;
+        color: $color-text-base;
+        font-weight: bold;
+        background: $color-box-footer;
+        border-radius: 0.3em;
+        padding: 0.3em 1em;
+        margin: 0.5em 0;
+        border: 1px solid $color-line-in-white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          width: 33%;
+        }
+
+        img {
+          transform: rotate(180deg);
+          padding-left: 1em;
+        }
+
+      }
+    }
+
+    .price-contact {
+      width: 100%;
+      padding: 1.6em;
+      background: $color-box-footer;
+
+      .price {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+        
+        span {
+          color: $color-text-base;
+          font-size: 0.9em;
+        }
+
+        strong {
+          font-family: Archivo, sans-serif;
+          color: $color-primary;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .favorite {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 3.5em;
+          height: 3.5em;
+          background: $color-primary;
+  
+          img {
+            width: 100%;
+          }
+
+          &:hover {
+            background: $color-primary-dark;
+          }
+        }
+
+        .contact {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          height: 3.5em;
+          width: 78%;
+
+          img {
+            margin-right: 0.7em;
+          }
+
+          &:hover {
+            background: $color-secondary-dark;
+          }
+        }
+      }
+    }
+  }
+}

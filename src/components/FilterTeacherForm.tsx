@@ -23,6 +23,10 @@ const FilterTeacherForm: React.FC<FilterTeacherFormProps>= ({ showForm }) => {
       height: 0,
       overflow: 'hidden',
     },
+    exit: {
+      height: 0,
+      overflow: 'hidden',
+    },
   };
 
   return (
@@ -33,7 +37,7 @@ const FilterTeacherForm: React.FC<FilterTeacherFormProps>= ({ showForm }) => {
             variants={ variants }
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            exit="exit"
           >
             <div className="select-wrapper">
               <label htmlFor="subject" />

@@ -98,11 +98,11 @@
   border-radius: .6em;
   border: none;
   cursor: pointer;
+  transition: .1s;
 
   &.green {
     background-color: $color-secondary;
     color: $color-button-text;
-    transition: background-color .2s;
     &:hover {
       background-color: $color-secondary-dark;
     }
