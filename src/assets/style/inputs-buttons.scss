@@ -1,6 +1,6 @@
 .inputs {
   width: 100%;
-  
+
   .input-block {
     position: relative;
 
@@ -16,9 +16,9 @@
       border: 1px solid $color-line-in-white;
       background-color: $color-input-background;
       color: $color-primary-darker;
-      font-size: .9em;
+      font-size: 0.9em;
       outline: none;
-      transition: .2s;
+      transition: 0.2s;
       padding-top: 1em;
 
       &::-ms-reveal {
@@ -32,10 +32,10 @@
       content: '';
       background: $color-primary-light;
       position: absolute;
-      top: .6em;
-      bottom: .6em;
+      top: 0.6em;
+      bottom: 0.6em;
       left: 0;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     &:focus-within::before {
@@ -50,27 +50,27 @@
       pointer-events: none;
       z-index: 1;
       color: $color-text-complement;
-      transition: .2s;
-      font-size: .8em;
+      transition: 0.2s;
+      font-size: 0.8em;
     }
 
     &.not-empty::after {
       transform: translateY(-1em);
-      font-size: .7em;
+      font-size: 0.7em;
     }
 
     &:focus-within::after {
       transform: translateY(-1em);
-      font-size: .7em;
+      font-size: 0.7em;
     }
 
     .first {
       border-bottom: none;
-      border-radius: .6em .6em 0 0;
+      border-radius: 0.6em 0.6em 0 0;
     }
-  
+
     .second {
-      border-radius: 0 0 .6em .6em;
+      border-radius: 0 0 0.6em 0.6em;
     }
 
     .show-password {
@@ -83,7 +83,7 @@
       width: 1.7em !important;
       height: 1.7em;
       z-index: 2;
-  
+
       img {
         width: 100%;
         height: 100%;
@@ -95,10 +95,11 @@
 .btn {
   padding: 1em;
   width: 100%;
-  border-radius: .6em;
+  border-radius: 0.6em;
   border: none;
   cursor: pointer;
-  transition: .1s;
+  transition: 0.1s;
+  font-family: Archivo, sans-serif;
 
   &.green {
     background-color: $color-secondary;
@@ -107,14 +108,14 @@
       background-color: $color-secondary-dark;
     }
   }
-  
+
   &:disabled {
     color: $color-text-complement;
-    background-color: #DCDCE5;
+    background-color: #dcdce5;
     cursor: default;
 
     &:hover {
-      background-color: #DCDCE5;
+      background-color: #dcdce5;
     }
   }
 }

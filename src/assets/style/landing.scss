@@ -47,36 +47,41 @@
       justify-content: space-between;
       height: 9.4em;
 
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-
-        padding: 1.2em;
-        color: $color-title-in-primary;
-        height: 100%;
+      div {
         width: 47%;
-        border-radius: 0.4em;
-        font-family: Archivo, sans-serif;
-        font-size: 1.1em;
-        font-weight: 600;
-        background: $color-primary-lighter;
-        transition: 0.2s;
+        height: 100%;
 
-        img {
-          height: 60%;
-        }
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
 
-        &:hover {
-          background: $color-primary-light;
-        }
+          width: 100%;
+          padding: 1.2em;
+          color: $color-title-in-primary;
+          height: 100%;
+          border-radius: 0.4em;
+          font-family: Archivo, sans-serif;
+          font-size: 1.1em;
+          font-weight: 600;
+          background: $color-primary-lighter;
+          transition: 0.2s;
 
-        &:nth-child(2) {
-          background: $color-secondary;
+          img {
+            height: 45%;
+          }
 
           &:hover {
-            background: $color-secondary-dark;
+            background: $color-primary-light;
+          }
+
+          &.green {
+            background: $color-secondary;
+
+            &:hover {
+              background: $color-secondary-dark;
+            }
           }
         }
       }
@@ -100,7 +105,7 @@
     align-items: center;
     background-color: $color-background;
     padding: 0;
-    
+
     .logo-img-container {
       background: $color-primary;
       display: flex;
@@ -124,7 +129,7 @@
             align-self: center;
             width: 100%;
           }
-          
+
           h2 {
             color: $color-title-in-primary;
             font-size: 1.5em;
@@ -134,7 +139,7 @@
           }
         }
       }
-      
+
       .img-wrapper {
         width: 45%;
         justify-content: center;
@@ -153,7 +158,7 @@
       padding: 0;
       width: 70%;
       max-width: 1750px;
-      
+
       h2 {
         color: $color-text-title;
         width: 25%;
@@ -166,16 +171,19 @@
         width: 70%;
         max-width: 30em;
 
-        a {
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
+        div {
           width: 48.5%;
+          a {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
 
-          img {
-            margin-right: 1.5em;
-            width: auto;
-            height: 100%;
+            img {
+              margin-right: 1.5em;
+              width: auto;
+              height: 100%;
+            }
           }
         }
       }
@@ -187,5 +195,4 @@
       }
     }
   }
-
 }

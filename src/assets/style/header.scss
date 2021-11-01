@@ -3,24 +3,31 @@
   color: $color-title-in-primary;
   padding-bottom: 5em;
   width: 100%;
-  
-  .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
+  .top-header {
     padding: 0 1.5em;
     height: 5.5em;
     backdrop-filter: brightness(0.9);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-    h1 {
-      font-size: 0.9em;
-      font-weight: 200;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    img {
-      width: 2.7em;
+    .top-header-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        font-size: 0.9em;
+        font-weight: 200;
+      }
+
+      img {
+        width: 2.7em;
+      }
     }
   }
 
@@ -38,8 +45,9 @@
 
       .subtitle {
         margin-top: 0.75em;
-        font-size: 1.3em;
+        font-size: 1.5em;
         font-weight: 600;
+        font-family: Archivo, sans-serif;
       }
 
       p {
@@ -98,7 +106,7 @@
         justify-content: center;
         padding: 1em;
         width: 100%;
-  
+
         .select-wrapper {
           display: flex;
           flex-direction: column;
@@ -107,7 +115,7 @@
           color: $color-text-in-primary;
           width: 100%;
           padding: 0 0.7em;
-  
+
           select {
             outline: none;
             background: $color-input-background;
@@ -115,7 +123,7 @@
             color: $color-text-complement;
             border-radius: 0.4em;
             border: solid 1px $color-line-in-white;
-            font-size: 1.1em;;
+            font-size: 1.1em;
             width: 100%;
             margin: 0.5em 0;
           }
@@ -127,7 +135,7 @@
             padding-right: 0;
           }
           &:nth-child(3) {
-              width: 40%;
+            width: 40%;
           }
         }
       }
@@ -139,9 +147,13 @@
   .header {
     padding-bottom: 0;
 
+    .top-header .top-header-content {
+      max-width: 1100px;
+    }
+
     .lower-header {
       width: 75%;
-      max-width: 1300px;
+      max-width: 900px;
       margin: auto;
       padding: 2em 0;
     }
@@ -155,11 +167,10 @@
         height: auto;
         justify-content: space-between;
         width: 76%;
-        max-width: 1300px;
+        max-width: 920px;
         margin: auto;
         padding: 1em 0.5em;
 
-        
         .select-wrapper {
           margin-bottom: -3em;
           padding: 0;
@@ -174,7 +185,7 @@
             width: 31%;
           }
           &:nth-child(3) {
-              width: 31%;
+            width: 31%;
           }
         }
       }
